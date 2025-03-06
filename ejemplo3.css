@@ -1,0 +1,98 @@
+/* Estilos generales */
+style.css
+:root {
+    --primary-color: rgb(236, 236, 236);
+    --secondary-color: rgb(21, 21, 21);
+    --blue-color: #2bc5cd;
+    --orange-color: #ff693d;
+    --border: 2px solid var(--blue-color);
+    --spacing: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing);
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Estilos para los elementos del grid */
+  header {
+    background-color: var(--blue-color);
+    color: white;
+    padding: var(--spacing);
+    grid-column: span 2;
+  }
+  
+  .school {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg);
+    background-size: cover;
+    height: 200px;
+  }
+  
+  .student {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg);
+    background-size: cover;
+    height: 200px;
+  }
+  
+  main {
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-column: span 2;
+    padding: var(--spacing);
+  }
+  
+  .time {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg);
+    background-size: cover;
+    height: 200px;
+  }
+  
+  .alumni {
+    background-image: url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg);
+    background-size: cover;
+    height: 200px;
+    grid-column: span 2;
+  }
+  
+  footer {
+    background-color: var(--orange-color);
+    color: white;
+    padding: var(--spacing);
+    text-align: center;
+    grid-column: span 3;
+  }
+  
+  button {
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+    header, .school, .student, main, .time, .alumni, footer {
+      grid-column: span 1;
+    }
+  }
+  
